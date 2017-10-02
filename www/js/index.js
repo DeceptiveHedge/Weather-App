@@ -20,7 +20,7 @@ var launched_count = 0;
 		alert("device ready");
         
 		document.addEventListener("resume ok", onResume, false);
-		document.addEventListener("pause", onPause, false);
+		document.addEventListener("pause ok", onPause, false);
 		
 		launched_count++;
 		updateDisplay();
