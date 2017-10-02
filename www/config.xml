@@ -6,7 +6,7 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Application Lifecycle Test</name>
+    <name>Best App Ever</name>
 
     <description>
         A sample application that counts the occurances of lifecycle events.
@@ -15,6 +15,8 @@
     <author href="worcester.ac.uk" email="c.bowers@worc.ac.uk">
         WBS Computing
     </author>
+    
+    <platform name="android" />
 
     <preference name="permissions"                value="none"/>   
 	
