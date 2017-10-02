@@ -29,13 +29,13 @@ var launched_count = 0;
     // Handle the pause event
     //
     function onPause() {
-		alert("pause");
+		alert("pause ok");
 		paused_count++;
 		updateDisplay();
     }
 	
 	function onResume() {
-		alert("resume");
+		alert("resume ok");
 		resumed_count++;
 		updateDisplay();
     }
