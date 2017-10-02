@@ -22,6 +22,8 @@ var launched_count = 0;
 		document.addEventListener("resume", onResume, false);
 		document.addEventListener("pause", onPause, false);
 		
+		console.log(device.cordova);
+		
 		launched_count++;
 		updateDisplay();
     }
