@@ -18,6 +18,7 @@ var launched_count = 0;
     //
     function onDeviceReady() {
 		
+        alert("ready to go");
         
 		document.addEventListener("resume", onResume, false);
 		document.addEventListener("pause", onPause, false);
@@ -27,23 +28,23 @@ var launched_count = 0;
 		launched_count++;
 		updateDisplay();
         
-        alert("ready to go");
+        
     }
 
     // Handle the pause event
     //
     function onPause() {
-		
+		alert("paused now");
 		paused_count++;
 		updateDisplay();
         
-        alert("paused now");
+        
     }
 	
 	function onResume() {
-		
+		alert("resume now");
 		resumed_count++;
 		updateDisplay();
         
-        alert("resume now");
+        
     }
