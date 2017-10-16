@@ -58,9 +58,10 @@ var launched_count = 0;
     function getItem() {
         var key = "phone";
         var value = window.localStorage.getItem(key);
+        var length = window.localStorage.length();
         
-        $("#item").text("Item: " + value);
-        $("#number").text("No of items: " + window.localStorage.length());
+        $("#item").text("Item: " + key + " Value: " + value);
+        $("#number").text("No of items: " + length);
     }
 
     // Handle the pause event
