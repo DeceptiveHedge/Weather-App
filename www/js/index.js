@@ -27,8 +27,40 @@ var launched_count = 0;
 		
 		launched_count++;
 		updateDisplay();
+        setItems();
+        getItem();
         
         
+    }
+
+   function setItems() {
+       var key = "phone";
+       var value = "black";
+       window.localStorage.setItem( key, value );
+       
+       key = "cable";
+       value = "white";
+       window.localStorage.setItem( key, value );
+       
+       key = "notepad";
+       value = "blue";
+       window.localStorage.setItem( key, value );
+       
+       key = "chair";
+       value = "blue";
+       window.localStorage.setItem( key, value );
+       
+       key = "jacket";
+       value = "blue";
+       window.localStorage.setItem( key, value );
+   }
+
+    function getItem() {
+        var key = "phone";
+        var value = window.localStorage.getItem(key);
+        
+        $("#item").text("Item: " + value);
+        $("#number").text("No of items: " + window.localStorage.length());
     }
 
     // Handle the pause event
