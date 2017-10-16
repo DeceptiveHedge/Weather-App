@@ -62,7 +62,7 @@ function getItem() {
 }
 
 function getLength() {
-    var length = window.localStorage.length();
+    var length = window.localStorage.length;
     $("#length").text("Length: " + length);
 }
 
