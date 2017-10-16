@@ -31,6 +31,8 @@ function onDeviceReady() {
     getItem();
     getLength();
     chocBar();
+    chocArray();
+    
 }
 
 function setItems() {
@@ -87,6 +89,66 @@ function chocBar() {
     value = JSON.parse(valueJSON);
     
     $("#bar").text("Carbohydrates: " + value.CarbohydratesG);
+}
+
+function chocArray() {
+    var array = [{
+        "name": "Twix",
+        "EnergyKJ": "2074",
+        "EnergyKCAL": "495",
+        "FatG": "24.0",
+        "of which saturatesG": "13.9",
+        "CarbohydrateG": "64.6",
+        "of which sugars": "48.8",
+        "ProteinG": "4.5",
+        "SaltG": "0.44",
+    }, {
+        "name": "Galaxy",
+        "EnergyKJ": "2278",
+        "EnergyKCAL": "546",
+        "FatG": "32.4",
+        "of which saturatesG": "19.7",
+        "CarbohydrateG": "55.7",
+        "of which sugars": "55.1",
+        "ProteinG": "6.8",
+        "SaltG": "0.30",
+    }, {
+        "name": "Mars",
+        "EnergyKJ": "1883",
+        "EnergyKCAL": "448",
+        "FatG": "16.7",
+        "of which saturatesG": "8.1",
+        "CarbohydrateG": "69.3",
+        "of which sugars": "59.9",
+        "ProteinG": "4.4",
+        "SaltG": "0.42",
+    }, {
+        "name": "Bounty",
+        "EnergyKJ": "2036",
+        "EnergyKCAL": "487",
+        "FatG": "25.7",
+        "of which saturatesG": "21.2",
+        "CarbohydrateG": "58.9",
+        "of which sugars": "48.2",
+        "ProteinG": "3.7",
+        "SaltG": "0.25",
+    }, {
+        "name": "Snickers",
+        "EnergyKJ": "2131",
+        "EnergyKCAL": "510",
+        "FatG": "27.9",
+        "of which saturatesG": "9.6",
+        "CarbohydrateG": "54.4",
+        "of which sugars": "44.9",
+        "ProteinG": "9.5",
+        "SaltG": "0.45",
+    }];
+    
+    var output = '';
+    $.each(array, function (index, value) {
+        output += '<li>' + value.name + '</li>';
+    });
+    $('#searchFood').html(output).listview("refresh");
 }
 
 // Handle the pause event
