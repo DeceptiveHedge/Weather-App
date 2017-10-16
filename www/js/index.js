@@ -86,7 +86,7 @@ function chocBar() {
     var valueJSON = window.localStorage.getItem(key);
     value = JSON.parse(valueJSON);
     
-    $("#bar").text("Info: " + value);
+    $("#bar").text("Carbohydrates: " + value.CarbohydratesG);
 }
 
 // Handle the pause event
