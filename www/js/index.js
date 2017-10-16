@@ -56,10 +56,8 @@ function setItems() {
 function getItem() {
     var key = "phone";
     var value = window.localStorage.getItem(key);
-    var num = window.localStorage.length();
         
     $("#item").text("Item: " + value);
-    $("#num").text("Number of items: " + num);
 }
 
 // Handle the pause event
