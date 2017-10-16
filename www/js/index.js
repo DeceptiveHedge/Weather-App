@@ -60,7 +60,7 @@ var launched_count = 0;
         var value = window.localStorage.getItem(key);
         var length = window.localStorage.length();
         
-        $("#item").text("Item: " + key + " Value: " + value);
+        $("#item").text("Item: " + value);
         $("#number").text("No of items: " + length);
     }
 
