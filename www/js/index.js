@@ -28,7 +28,8 @@ function onDeviceReady() {
     launched_count++;
     updateDisplay();
     setItems();
-    getItem();          
+    getItem();
+    getLength();
 }
 
 function setItems() {
@@ -58,6 +59,11 @@ function getItem() {
     var value = window.localStorage.getItem(key);
         
     $("#item").text("Item: " + value);
+}
+
+function getLength() {
+    var length = window.localStorage.length();
+    $("#length").text("Length: " + length);
 }
 
 // Handle the pause event
