@@ -30,6 +30,7 @@ function onDeviceReady() {
     setItems();
     getItem();
     getLength();
+    chocBar();
 }
 
 function setItems() {
@@ -64,6 +65,28 @@ function getItem() {
 function getLength() {
     var length = window.localStorage.length;
     $("#length").text("Length: " + length);
+}
+
+function chocBar() {
+    var bar= {
+        "EnergyKJ": "2278",
+        "EnergyKCAL": "546",
+        "FatG": "32.4",
+        "of which saturatesG": "19.7",
+        "CarbohydratesG": "55.7",
+        "of which sugarsG": "55.1",
+        "ProteinG": "6.8",
+        "SaltG": "0.30"
+    }
+    
+    var key = "chocbar";
+    var value = JSON.stringify(bar); 
+    window.localStorage.setItem( key, value);
+    
+    var valueJSON = window.localStorage.getItem(key);
+    value = JSON.parse(valueJSON);
+    
+    $("#bar").text("Info: " + value);
 }
 
 // Handle the pause event
