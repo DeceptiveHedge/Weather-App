@@ -1,7 +1,10 @@
 document.addEventListener("deviceready", onDeviceReady, false);
+
 function onDeviceReady() {
     console.log(navigator.notification);
     console.log(navigator.vibrate);
+    $("#submitButton").on("click", buttonClicked);
+    shake.startWatch(onShake, 40);
 }   
 
 var words = [
@@ -26,9 +29,20 @@ var words = [
         "Outlook no so good",
         "Very doubtful"
     ]
-shake.startWatch(onShake, 40);
 
-var onShake = function submit() {
+
+function buttonClicked()
+{
+    alert("button clicked");
+    submit();
+}
+
+function onShake()
+{
+    alert("shake works");
+}
+
+function submit() {
     var text = $('#textinput').val();
     var rAnswer = randomAnswer();
     $("#responseText").text(rAnswer);
