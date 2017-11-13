@@ -6,10 +6,10 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Output</name>
+    <name>Output 2: The Magic 8 Ball</name>
 
     <description>
-        A sample application that counts the occurances of lifecycle events.
+        A magic 8 ball that can tell the future. Kind of.
     </description>
 
     <author href="worcester.ac.uk" email="c.bowers@worc.ac.uk">
