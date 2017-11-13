@@ -1,4 +1,4 @@
- document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     console.log(navigator.notification);
     console.log(navigator.vibrate);
@@ -42,8 +42,7 @@ function randomNum() {
 }
 
 function randomAnswer() {
-    var result = words[randomNum()] + 
-    words[randomNum() + 3];
+    var result = words[randomNum()] + words[randomNum() + 3];
     return result;
 }
 
