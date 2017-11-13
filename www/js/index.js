@@ -1,27 +1,22 @@
-
-
-function onLoad() {
-    document.addEventListener("deviceready", onDeviceReady, false);
-    console.log("device ready");
-}
-	
-function updateDisplay() {
-    
-}
-
-
-// device APIs are available
-//
+ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-		
-    alert("ready to go");
-        
-    document.addEventListener("resume", onResume, false);
-    document.addEventListener("pause", onPause, false);
-		
-    console.log(device.cordova);
-		
-    launched_count++;
-    updateDisplay();
-    
+    console.log(navigator.notification);
+}   
+
+function random() {
+	var rValue = !Math.round(Math.random());
+    $("#rV").text(rValue);
+    if (rValue = true)
+    {
+        navigator.notification.beep(1);
+        navigator.vibrate(2000);
+    }
+    else
+    {
+        navigator.notification.beep(2);
+        navigator.vibrate([200, 300, 500]);
+    }
 }
+
+
+

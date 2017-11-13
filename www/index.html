@@ -11,10 +11,22 @@
 	
 </head>
 
-<body onload="onLoad()">
+<body>
   
-  	<h1>App stuff</h1>
-	<div id="launched"></div>
+  	<div data-role="page" id="pageone">
+        
+ 	<div data-role="header">Header</div>
+        
+  	<div role="main" class="ui-content">
+  	    
+        <button onClick="random()">Random1</button>
+        
+        Random value is: <span id="rV">Value</span> 
+
+    </div>
+        
+    <div data-role="footer">Footer</div>
+	</div>
 
 </body>
 </html>
