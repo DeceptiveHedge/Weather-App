@@ -26,13 +26,13 @@ var words = [
         "Outlook no so good",
         "Very doubtful"
     ]
+shake.startWatch(onShake, 40);
 
-function submit() {
+var onShake = function submit() {
     var text = $('#textinput').val();
     var rAnswer = randomAnswer();
     $("#responseText").text(rAnswer);
-    //soundResponse(rAnswer);
-    
+    soundResponse(rAnswer);   
 }
 
 function randomNum() {
@@ -46,24 +46,24 @@ function randomAnswer() {
     return result;
 }
 
-/*function soundResponse(var answer) {
-    for (var i=0; i<20; i++)
+function soundResponse(answer) {
+    for (var i=0; i < words.length(); i++)
     {
-        if ((answer == words[i]) && (i < 10))
+        if ((answer == words[i]) && (i < 10)
         {
-            navigator.notification.bleep(2);
+            navigator.notification.beep(2);
         }
-        else if ((answer == words[i]) && (9 < i < 15))
+        else if ((answer == words[i]) && (i > 9) && (i < 16))
         {
-            navigator.notification.bleep(1);
+            navigator.notification.beep(1);
             navigator.vibrate(1000);
         }
-        else if ((answer == words[i]) && (i > 14))
+        else if ((answer == words[i]) && (i > 15))
         {
             navigator.vibrate(2000);
-        }  
+        }   
     }
-}*/
+}
 
 /*function random() {
 	var rValue = !Math.round(Math.random());
