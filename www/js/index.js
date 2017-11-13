@@ -4,7 +4,7 @@ function onDeviceReady() {
     console.log(navigator.vibrate);
 }   
 
-/*var words = [
+var words = [
         "It is certain",
         "It is decidedly so",
         "Without a doubt",
@@ -25,28 +25,28 @@ function onDeviceReady() {
         "My sources say no",
         "Outlook no so good",
         "Very doubtful"
-    ];*/
+    ]
 
-/*function submit() {
+function submit() {
     var text = $('#textinput').val();
     var rAnswer = randomAnswer();
-    $("#responseText").text( rAnswer );
-    soundResponse(rAnswer);
+    $("#responseText").text(rAnswer);
+    //soundResponse(rAnswer);
     
-}*/
+}
 
-/*function randomNum() {
-    var num = Math.round(Math.random() * 3);
+function randomNum() {
+    var num = Math.round(Math.random() * 19);
     alert(num);
     return num;
 }
 
 function randomAnswer() {
-    var result = words[randomNum()] + words[randomNum() + 3];
+    var result = words[randomNum()];
     return result;
 }
 
-function soundResponse(var answer) {
+/*function soundResponse(var answer) {
     for (var i=0; i<20; i++)
     {
         if ((answer == words[i]) && (i < 10))
@@ -65,7 +65,7 @@ function soundResponse(var answer) {
     }
 }*/
 
-function random() {
+/*function random() {
 	var rValue = !Math.round(Math.random());
     $("#rV").text(rValue);
     if (rValue = true)
@@ -78,7 +78,7 @@ function random() {
         navigator.notification.beep(2);
         navigator.vibrate([200, 300, 500]);
     }
-}
+}*/
 
 
 
