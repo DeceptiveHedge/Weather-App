@@ -21,7 +21,7 @@ function getPosition() {
 	
 	//instruct location service to get position with appropriate callbacks
 	//navigator.geolocation.getCurrentPosition(successPosition, failPosition);
-    var watchID = navigator.geolocation.watchPosition(successPosition, failPosition);
+    var watchID = navigator.geolocation.watchPosition(successPosition, failPosition, locationOptions);
 }
 
 //Call this function when you want positional data off
@@ -56,4 +56,10 @@ function failPosition(error) {
 	//change time box to show updated message
 	$('#time').val("Error getting data: " + error);
 	
+}
+
+var locationOptions = {
+    maximumAge: 10000,
+    timeout: 6000,
+    enableHighAccuracy: true;
 }
