@@ -2,7 +2,10 @@
 $(document).on('pageinit', function() {
 	
 	//set up listener for button click
-	$(document).on('click', getPosition);
+	//$(document).on('click', getPosition);
+    $('#locationOn').on('click', getPosition);
+    
+    $('#locationOff').on('click', stopPosition);
 	
 	//change time box to show message
 	$('#time').val("Press the button to get location data");
@@ -17,9 +20,14 @@ function getPosition() {
 	$('#time').val("Getting data...");
 	
 	//instruct location service to get position with appropriate callbacks
-	navigator.geolocation.getCurrentPosition(successPosition, failPosition);
+	//navigator.geolocation.getCurrentPosition(successPosition, failPosition);
+    var watchID = navigator.geolocation.watchPosition(successPosition, failPosition);
 }
 
+//Call this function when you want positional data off
+function stopPosition() {
+    navigator.geolocation.clearWatch(watchID);
+}
 
 //called when the position is successfully determined
 function successPosition(position) {
