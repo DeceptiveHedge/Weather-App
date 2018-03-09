@@ -13,6 +13,7 @@ $(document).on('pagecreate', '#feedPage', function(event) {
 	        // http://json.parser.online.fr/ 
             var weather= JSON.parse(xmlhttp.responseText);
             
+            
             //Define Ractive binding
             var ractive = new Ractive({
     	    el: 'container', <!-- where -->
@@ -25,13 +26,6 @@ $(document).on('pagecreate', '#feedPage', function(event) {
                
 	xmlhttp.open("GET", feedURL, true);
 	xmlhttp.send();
-		
-		
-	
-	
-	
-	
-	//Define Ractive binding
 	
 	
 });
